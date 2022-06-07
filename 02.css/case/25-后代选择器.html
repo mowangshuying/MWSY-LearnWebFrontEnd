@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>复合选择器之后代选择器</title>
+    <style>
+        /* 什么是复合选择器：在css中，可以根据选择器类型把选择器分为：基础选择器(标签选择器，id选择器，类选择器）复合选择器
+        建立在在基础选择器上，对基本选择器进行组合形成的，常用的复合选择器包括：后代选择器，子选择器，并集选择器，伪类选择器鞥*/
+        /*后代选择器：
+            元素1 元素2 {样式声明}
+            * 元素之间用空格分割
+            * 元素1是父节点 元素2为子节点 最终选择为 元素1的子节点元素2
+            * 元素2可以是儿子，也可以是孙子等等，只要是元素1的后代即可
+            * 元素1和元素2可以是任意的基础选择器
+        */
+        /* 我想要把ol里面的小li选出来改为pink */
+        
+        ol li {
+            color: pink;
+        }
+        /* 中国 山东 济南 蓝翔 */
+        
+        ol li a {
+            color: red;
+        }
+        /* nav为导航栏专用格式*/
+        
+        .nav li a {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        变态写法
+        <li>我是ol 的孩子</li>
+        <li>我是ol 的孩子</li>
+        <li>我是ol 的孩子</li>
+        <li><a href="#">我是孙子</a></li>
+    </ol>
+    <ul>
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li><a href="#">不会变化的</a></li>
+    </ul>
+    <ul class="nav">
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li>我是ul 的孩子</li>
+        <li><a href="#">不会变化的</a></li>
+        <li><a href="#">不会变化的</a></li>
+        <li><a href="#">不会变化的</a></li>
+        <li><a href="#">不会变化的</a></li>
+    </ul>
+
+</body>
+
+</html>
