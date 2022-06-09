@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>盒子阴影</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            /* box-shadow: 10px 10px; */
+        }
+        
+        div:hover {
+            /* offset-x 第一个长度指明了阴影水平方向的偏移，即阴影在x轴位置，值为正数时，阴影在元素的右侧，值为负数时候，阴影在元素的左侧*/
+            /* offset-y:第二个长度指明了阴影竖直方向的偏移，即阴影在y轴位置，值为正数时，阴影在元素的下侧，值为负数时候，阴影在元素的上侧*/
+            /* blur:第三个长度代表了音乐法人模糊半径*/
+            /* spread 代表阴影的扩展半径，其值可以是正负值，如果为正，整个阴影的扩展扩大，如反之值为负值，则缩小*/
+            box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, .3);
+        }
+        /* 原先盒子没有影子,当我们鼠标经过盒子就添加阴影效果 */
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
