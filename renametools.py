@@ -19,8 +19,15 @@ os.rename(src , dst)
 import os
 os.getcwd()
 
+获取某个目录下的文件列表
+fileList = os.listdir(tmpDir)
+遍历文件列表并获取文件名和后缀名
+for file in fileList:
+    fileName = os.path.splitext(file)[0]
+    fileSuffix = os.path.splitext(file)[1]
 
-
+重命名文件夹
+os.rename
 """
 
 from fileinput import filename
@@ -31,7 +38,7 @@ print("rename tools started!")
 # 需要管理的文件夹
 cwdDir = os.getcwd()
 
-regWorkList = ['\\\\01.html\\\\case','\\\\02.css\\\\case','\\\\03.js\\\\case'] 
+regWorkList = ['\\\\01.html\\\\case','\\\\02.css\\\\case','\\\\03.js\\\\base\\\\case'] 
 # 遍历文件夹
 # print(regWorkList)
 for dir in regWorkList:
@@ -52,7 +59,9 @@ for dir in regWorkList:
         
         if fileName[2] == '-':
             newFileName = '0'+fileName
+            print("the file name:"+filename+" ,rename filename:"+newFileName)
         else:
+            print("the file name:"+filename+" is format")
             continue
         
         # print("filename:"+fileName)
